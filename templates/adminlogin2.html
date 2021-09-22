@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="ie6 ielt8"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="ie7 ielt8"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="ie8"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>STUDENT LOGIN</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<link rel="stylesheet"href="bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bootstrap4/bootstrap.min.css">
+    <div align="right">
+      <button><b>
+      <a href="home.html">HOME</a> &nbsp;| &nbsp;
+    <a href="about.html">ABOUT US</a> &nbsp;| &nbsp;
+    <a href="registration.html">REGISTRATION</a> &nbsp;| &nbsp;
+    <a href="login.html">LOGIN</a> &nbsp;| &nbsp;
+    <a href="contact.html">CONTACT US</a> &nbsp;| &nbsp;
+  </b></button>
+    </div>
+    <br />
+<style>
+    /* Reset CSS */
+
+body {
+  background:rgb(194, 191, 191);
+  background-image: url(https://kissir.com/wp-content/uploads/2018/02/contact-background-1.jpg);
+}
+
+
+#content {
+ 
+  border: 1px solid #c4c6ca;
+  margin: 0 auto;
+  padding: 25px 0 0;
+  position: relative;
+  text-align: center;
+  text-shadow: 0 1px 0 #fff;
+  width: 400px;
+}
+#content h1 {
+  color: #7E7E7E;
+  font: bold 25px Helvetica, Arial, sans-serif;
+  letter-spacing: -0.05em;
+  line-height: 20px;
+  margin: 10px 0 30px;
+}
+#content h1:before,
+#content h1:after {
+  content: "";
+  height: 1px;
+  position: absolute;
+  top: 10px;
+  width: 27%;
+}
+#content h1:after {
+  background: rgb(126,126,126);
+right: 0;
+}
+#content h1:before {
+  background: rgb(126,126,126);
+  left: 0;
+}
+#content:after,
+#content:before {
+  background: #f9f9f9;
+  border: 1px solid #c4c6ca;
+  content: "";
+  display: block;
+  height: 100%;
+  left: -1px;
+  position: absolute;
+  width: 100%;
+}
+#content:after {
+  -webkit-transform: rotate(2deg);
+  -moz-transform: rotate(2deg);
+  -ms-transform: rotate(2deg);
+  -o-transform: rotate(2deg);
+  transform: rotate(2deg);
+  top: 0;
+  z-index: -1;
+}
+#content:before {
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+  top: 0;
+  z-index: -2;
+}
+#content form { margin: 0 20px; position: relative }
+#content form input[type="text"],
+#content form input[type="password"] {
+  background: #eae7e7 url(https://cssdeck.com/uploads/media/items/8/8bcLQqF.png) no-repeat;
+  border: 1px solid #c8c8c8;
+  color: #777;
+  font: 13px Helvetica, Arial, sans-serif;
+  margin: 0 0 10px;
+  padding: 15px 10px 15px 40px;
+  width: 80%;
+}
+#content form input[type="text"]:focus,
+#content form input[type="password"]:focus {
+  background-color: #fff;
+  border: 1px solid #ed1c24;
+  outline: none;
+}
+#username { background-position: 10px 10px !important }
+#password { background-position: 10px -53px !important }
+#content form input[type="submit"] {
+ background-color: blue;
+ border-radius: 15px;
+  color: white;
+  cursor: pointer;
+  font: bold 15px Helvetica, Arial, sans-serif;
+  height: 35px;
+  margin: 20px 15px 35px 40px;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+  width: 120px;
+}
+#content form input[type="submit"]:hover {
+  background: rgb(70, 12, 230);
+}
+#content form div a {
+  color: #004a80;
+    float: left;
+    font-size: 13px;
+    text-decoration: underline;
+}
+.button {
+  background: rgb(247,249,250);
+  border-top: 1px solid #CFD5D9;
+  padding: 15px 0;
+}
+.button a {
+  background: url(https://cssdeck.com/uploads/media/items/8/8bcLQqF.png) 0 -112px no-repeat;
+  color: #7E7E7E;
+  font-size: 17px;
+  padding: 2px 0 2px 40px;
+}
+.button a:hover {
+  background-position: 0 135px;
+  color: #00aeef;
+}
+</style>
+<script>
+    function checkname() {
+        nameexp = /^[a-zA-Z ]{3,30}$/;
+        custname = document.getElementById("fname").value;
+        // alert(custname);
+
+        if (nameexp.test(custname)) {
+            document.getElementById('nameerrormessage').style.visibility = 'hidden';
+        }
+        else {
+            document.getElementById('nameerrormessage').style.visibility = 'visible';
+            document.getElementById('nameerrormessage').innerText = "Enter Valid Name";
+        }
+    }
+    function checkpassword() {
+            // at least one number, one lowercase and one uppercase letter
+            // at least six characters that are letters, numbers or the underscore
+            passwordexp = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])\w{4,8}$/;
+
+            custpassword = document.getElementById("password").value;
+            // alert(custpassword);
+
+            if (passwordexp.test(custpassword)) {
+                document.getElementById('passerrormessage').style.visibility = 'hidden';
+            }
+            else {
+                document.getElementById('passerrormessage').style.visibility = 'visible';
+                document.getElementById('passerrormessage').innerText = "Enter Valid Password";
+            }
+        }
+    </script>
+</head>
+<body background-image="images/login.jpg">
+    <br />
+    <br />
+    <br />
+    <br />
+<div class="container">
+  <section id="content">
+    <form action="">
+      <h1>Login Form</h1>
+      <div align="center">
+        <label for="name" class="text-uppercase font-weight-bold text-primary"></label>
+                                    <input type="text" onblur="checkname()" class="form-control" id="fname"
+                                        name="fullname" placeholder="Enter Your Full Name" required="required">
+                                    <div class="text-danger font-weight-bold" id="nameerrormessage"></div>
+      </div>
+      <div align="center">
+        <label for="password" class="text-uppercase font-weight-bold text-primary"></label>
+        <input type="password" onblur="checkpassword()" class="form-control" id="password" name="password"
+            placeholder="Enter password" required="required"  autocomplete="current-password" required="" 
+            id="id_password" >
+            <div class="text-danger font-weight-bold" id="passerrormessage"></div>
+      </div>
+      <br />
+      <div><a href="forgetpassword.html">Lost your password?</a>
+      </div>
+      <div align="right">
+        <input type="checkbox" value="lsRememberMe" id="rememberMe"> <label for="rememberMe">Remember me</label></div>
+      <div align="center">
+        <input type="submit" value="Log in" /></div>
+        
+    </form><!-- form -->
+    
+  </section><!-- content -->
+</div><!-- container -->
+</body>
+</html>

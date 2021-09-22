@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <div align="right" style="background-color:#33F1FF">
+        <button><b>
+        <a href="/">HOME</a> &nbsp;| &nbsp;
+      <a href="/registration">REGISTRATION</a> &nbsp;| &nbsp;
+      <a href="/login">LOGIN</a> &nbsp;| &nbsp;
+      <a href="/contact">CONTACT US</a> &nbsp;| &nbsp;
+    </b></button>
+      </div>
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #33F1FF;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+  
+  background-color: #33F1FF;
+}
+
+.title {
+  color: #33F1FF;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="about-section">
+  <h1>About</h1>
+  <p>This is the site for record student's online  attendence record.<br /> 
+           Here college faculties members can submit the attendence of all students.<br />
+            the attendence information here and students can overview it. If any student want <br />
+            to overview it he/she willhave to click on this specfic button which is recomanded for login and <br />
+            he/she can show his/her  attendence.</p>
+</div>
+
+<h2 style="text-align:center">Our Team</h2>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="{{url_for('static', filename='images/papai.jpg')}}" alt="Jane" width="350" height="350">
+      <div class="container">
+        <h2>PAPAI PRATIHAR</h2>
+        <p class="title">Team Member</p>
+		<h4>Introduction</h4>
+    <p>I am a Student, Computer Science And Engeneering,Gargi Memorial Institute Of Technology.</p>
+    <p>I love the internet, technology, and building beautiful things.</p>
+	<h4>Where I'm From</h4>
+    <p>I'm originally from Baruipur, South 24 Porgona. </p>
+        <p>papaipratihar01@gmail.com</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="{{url_for('static', filename='images/noushad.jpg')}}" alt="Mike" width="350" height="350">
+      <div class="container">
+        <h2>SK NOUSHAD DDOJA</h2>
+        <p class="title">Team Member</p>
+		<h4>Introduction</h4>
+    <p>I am a Student, Computer Science And Engeneering,Gargi Memorial Institute Of Technology.</p>
+    <p>I love the internet, technology, and building beautiful things.</p>
+	<h4>Where I'm From</h4>
+    <p>I'm originally from Baruipur, South 24 Porgona. </p>
+        <p>sayandj02@gmail.com</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <img src="{{url_for('static', filename='images/supriya.jpg')}}" alt="John" width="350" height="350">
+      <div class="container">
+        <h2>SUPRIYA PANDIT</h2>
+        <p class="title">Team Member</p>
+		<h4>Introduction</h4>
+    <p>I am a Student, Computer Science And Engeneering,Gargi Memorial Institute Of Technology.</p>
+    <p>I love the internet, technology, and building beautiful things.</p>
+	<h4>Where I'm From</h4>
+    <p>I'm originally from Baruipur, South 24 Porgona. </p>
+        <p>psupriya499@gmail.com</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

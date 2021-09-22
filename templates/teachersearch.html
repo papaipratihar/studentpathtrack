@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bootstrap4/bootstrap.min.css">
+
+  <title>Search</title>
+  <style>
+          .button1 {
+            background-color:#00008B; 
+            color: #FFFFFF;
+            padding: 8px;
+            text-align: center;
+            text-decoration:#FFFFFF;
+            display: inline-block;
+            font-size: 16px;
+            margin: 3px 0.5px;
+            cursor: pointer;
+            width: 90%;
+          }
+		  .button1 {border-radius: 15px;}
+		  .button2 {
+            background-color:#FF0000;
+            color: white;
+            padding: 8px;
+            text-align: center;
+            text-decoration:#FFFFFF;
+            display: inline-block;
+            font-size: 16px;
+            margin: 3px 0.5px;
+            cursor: pointer;
+            width: 90%;
+          }
+		  .button2 {border-radius: 15px;}
+		  </style>
+</head>
+
+<body>
+  <!-- main app container -->
+  <div class="container" style="text-align: center;">
+    <br />
+    <br />
+    <br />
+    <br />
+
+
+    <div class="row">
+      <div class="col-md-6 col-sm-8 mx-auto">
+        <div class="card">
+          <div class="card-body" style="background-color: #eeefff">
+            <div class="mt-2 text-center">
+              <h3 style="color: brown;">SEARCH USER</h3>
+            </div>
+            <div align = "center">
+			   <h5 style="color:red">
+			      <b> {{ errormsg }} </b>
+			   </h5>
+			</div>
+
+            <form action="/search" method="post">
+
+              <div class="form-group">
+                <label for="email" class="fw-bold text-uppercase text-primary">Email Id *</label>
+                <input type="email" name="email" class="form-control" placeholder="Enter Email Id">
+              </div>
+
+              <br />
+             
+              <input type="submit" class="btn btn-success btn-block" value="SEARCH">
+            </form>
+
+          </div> <!-- Card Body End -->
+        </div> <!-- Card End -->
+      </div> <!-- Col alignment end -->
+    </div> <!-- Row End -->
+	
+	<br/>
+	<br/>
+	
+	{% if show_results %}
+	
+    <div align = "center">
+	  <table class="table table-hover table-bordered">
+	   <tr>
+	      <th> Name </th>
+		  <th> Email </th>
+		  <th> Mobile </th>
+		  <th> depertment </th>
+		  <th> Gender </th>
+		  <th> DOB </th>
+		  <th> ADDRESS </th>
+		  <th> </th>
+	   </tr>
+	   {% for uobj in userdata %}
+       <tr>
+         <td> {{ uobj['username1'] }}&nbsp;{{ uobj['username2'] }}&nbsp;{{ uobj['username3'] }} </td>
+		 <td> {{ uobj['useremail'] }} </td>
+		 <td> {{ uobj['usermobile'] }} </td>
+		 <td> {{ uobj['userdepertment'] }} </td>
+		 <td> {{ uobj['usergender'] }} </td>
+		 <td> {{ uobj['userdateofbirth'] }} </td>
+		 <td> {{ uobj['useraddress'] }} </td>
+		 <td><button class="button button1"><h5><a href="/mentorupdateprofile">UPDATE</a></h5></button>
+		 <button class="button button2"><h5><a href="/delete">DELETE</a></h5></button></td>
+	   </tr>
+	   {% endfor %}
+	   <table>
+	</div>
+  {% endif %}
+  </br>
+  </br>
+  </br>
+  
+	
+  </div> <!-- Container End -->
+  
+
+</body>
+
+</html>

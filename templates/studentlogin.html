@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+	   integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bootstrap4/bootstrap.min.css">
+
+    <title>STUDENT LOGIN</title>
+    <div align="right">
+        <button><b>
+        <a href="/home">HOME</a> &nbsp;| &nbsp;
+      <a href="/about">ABOUT US</a> &nbsp;| &nbsp;
+      <a href="/registration">REGISTRATION</a> &nbsp;| &nbsp;
+      <a href="/login">LOGIN</a> &nbsp;| &nbsp;
+      <a href="/contact">CONTACT US</a> &nbsp;| &nbsp;
+    </b></button>
+      </div>
+      <style>
+        .button1 {
+          background-color: #183afc; 
+          border: none;
+          color: white;
+          padding: 8px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 3px 1px;
+          cursor: pointer;
+          width: 40%
+        }
+        .button2 {
+          background-color: transparent; 
+          border: none;
+          color: black;
+          padding: 8px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 3px 1px;
+          width: 60%
+        }
+        .button3 {
+          background-color: gainsboro; 
+          border: none;
+          color: white;
+          padding: 8px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 12px;
+          margin: 3px 1px;
+          width: 25%
+        }
+        .button4 {
+          background-color: transparent; 
+          border: none;
+          color: black;
+          padding: 8px;
+          text-align: center;
+          text-decoration: underline;
+          display: inline-block;
+          font-size: 16px;
+          margin: 3px 1px;
+          width: 60%
+        }
+        .button1 {border-radius: 15px;}
+                .button2 {border-radius: 8px;}
+                .button3 {border-radius: 8px;}
+                .button4 {border-radius: 8px;}
+        </style>
+        <!--<script>
+            function checkemail() {
+            
+            emailexp = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+
+            custemail = document.getElementById("email").value;
+            //alert(custemail);
+
+            if (emailexp.test(custemail)) {
+                document.getElementById('emailerrormessage').style.visibility = 'hidden';
+            }
+            else {
+                document.getElementById('emailerrormessage').style.visibility = 'visible';
+                document.getElementById('emailerrormessage').innerText = "Enter Valid Email ID";
+            }
+        }
+
+                function checkpassword() {
+            // at least one number, one lowercase and one uppercase letter
+            // at least six characters that are letters, numbers or the underscore
+            passwordexp = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])\w{4,8}$/;
+
+            custpassword = document.getElementById("password").value;
+            // alert(custpassword);
+
+            if (passwordexp.test(custpassword)) {
+                document.getElementById('passerrormessage').style.visibility = 'hidden';
+            }
+            else {
+                document.getElementById('passerrormessage').style.visibility = 'visible';
+                document.getElementById('passerrormessage').innerText = "Enter Valid Password";
+            }
+        }
+    </script>-->
+
+    </head>
+		<body background="{{url_for('static', filename='images/login.jpg')}}" >
+    <br />
+  <div align="center">
+    <button class="button button4">
+    <div style = "font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', 
+    sans-serif;">
+          <h1>STUDENT PATH TRACKING</h1>
+        </div>
+    </button>
+        <br />
+    
+        <div class="container">
+            <div class="form">
+            <div class="col-md-5 col-sm-6 mx-auto" style="background-color: rgba(6, 164, 175, 0.37); border-radius: 20px;">
+                
+                        <div class="mt-2 text-center">
+                            <button class="button button2"><h3>STUDENT LOGIN</h3></button>
+							<h3>{{msg}}</h3>
+                        </div>
+                        <div align="center">
+                        <div class="mt-4">
+                            <form action="/studentlogin" name='login' method='post'>
+                                <div class="form-group">
+                                    <label for="email"
+                                        class="text-uppercase font-weight-bold"></label>
+                                    <input type="email" onblur="checkemail()" class="form-control" id="email"
+                                        name="email" placeholder="Enter Your Email" required="required">
+                                    <div class="text-danger font-weight-bold" id="emailerrormessage"></div>
+                                </div>
+                                <div class="form-group">
+                                     <label for="password" class="text-uppercase font-weight-bold"></label>
+                                     <input type="password" onblur="checkpassword()" class="form-control" id="password" name="pass"
+                                         placeholder="Enter password" required="required"  autocomplete="current-password" required="" 
+                                         id="id_password" >
+                                         <div class="text-danger font-weight-bold" id="passerrormessage"></div>
+                                </div>
+                                <div>
+                                    <br />
+                                    <div align="left">
+                                        <button class="button button3"><a href="/forgetpassword">lost password?</a></button>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        
+                                        <input type="checkbox" value="lsRememberMe" id="rememberMe"> <label for="rememberMe">Remember me</label></div>
+                                        <div align="center"><button class="button button1" type="submit" class="btn btn-primary btn-block">Login</button>
+                                    </div>
+                                    <br />
+                                    </form>
+                                </div>
+                            </div> <!-- Form tag div -->
+                            </div> <!-- Card Body End -->
+                        </div> <!-- Card End -->
+                    </div> <!-- Col alignment end -->
+                </div><!-- Row End -->
+            </div> <!-- Container End -->
+                        </div>
+    </body>
+</html>

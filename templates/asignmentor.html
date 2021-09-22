@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+ <head> 
+  <!-- Required meta tags --> 
+  <meta charset="utf-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+  <!-- Bootstrap CSS --> 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
+  <title>Admin</title> 
+ </head> 
+ <body> 
+
+  <!-- Heading --> 
+  <div class="container"> 
+   <h1 class="text-success my-4">Assign Mentor</h1> 
+  </div> 
+  <div class="container"> 
+   <h3 id="successMsg" class="text-success my-2">{{ successMsg }}</h3> 
+  </div> 
+  <!-- Registration Form --> 
+  <div class="container my-4"> 
+   <form action="/mentorasign" method="POST" id="form"> 
+    <div class="mb-3"> 
+        <label for="name" class="form-label">student name</label> 
+        <input type="text" name="name" placeholder="student name "class="form-control" id="name" aria-describedby="emailHelp"> 
+       </div> 
+    <div class="mb-3"> 
+        <label for="email" class="form-label">email id</label> 
+        <input type="email" name="email" placeholder="Enter your college mail id" class="form-control" id="email" aria-describedby="emailHelp"> 
+       </div> 
+    <div class="mb-3"> 
+     <label for="roll" class="form-label">Roll Number</label> 
+     <input type="num" name="rollno" placeholder="Enter your college roll no" class="form-control" id="roll" aria-describedby="emailHelp"> 
+    </div> 
+    <div class="mb-3"> 
+     <label for="mentorName" class="form-label">Mentor Name</label> 
+     <input type="text" name="mentor" placeholder="Enter your mentor name" class="form-control" id="mentorName" aria-describedby="emailHelp"> 
+    </div> 
+    <div class="mb-3"> 
+     <label for="mentorEmail" class="form-label">Mentor Email</label> 
+     <input type="text" name="mentoremail" placeholder="Enter your mentor email" class="form-control" id="mentorEmail" aria-describedby="emailHelp"> 
+    </div> 
+    <!-- <div class="mb-3">
+                <label for="date" class="form-label">Date</label>
+                <input type="date" name="date" class="form-control" max="2012-12-31">
+            </div> --> 
+    <button type="submit" class="btn btn-outline-success" id="createAccount">Assign Mentor</button> 
+   </form> 
+  </div> 
+  <!-- Optional JavaScript --> 
+  <!-- jQuery first, then Popper.js, then Bootstrap JS --> 
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script> 
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>   
+ </body>
+</html>

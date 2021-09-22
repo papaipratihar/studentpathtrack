@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>CONTACT</title>
+
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+	  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+        <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+ 
+  <link href="https://fonts.googleapis.com/css?family
+  =Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,
+  600,600i,700,700i"
+   rel="stylesheet">
+
+   <div align="right">
+    <button><b>
+    <a href="/">HOME</a> &nbsp;| &nbsp;
+  <a href="/about">ABOUT US</a> &nbsp;| &nbsp;
+  <a href="/registration">REGISTRATION</a> &nbsp;| &nbsp;
+  <a href="/login">LOGIN</a> &nbsp;| &nbsp;
+</b></button>&nbsp;</div>
+    <style>
+      .button1 {
+        background-color: #183afc; /* Green */
+        border: none;
+        color: white;
+        padding: 8px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 3px 1px;
+        cursor: pointer;
+        width: 30%
+      }
+      .button2 {
+          background-color: transparent; 
+          border:none;
+          color:rgb(8, 3, 248);
+          padding: 8px;
+          text-align: center;
+          text-decoration:underline;
+          display: inline-block;
+          font-size: 16px;
+          width: 50%
+        }
+      
+      .button1 {border-radius: 15px;}
+      .button2 {border-radius: 15px;}
+      </style>
+</head>
+
+   
+    </head>
+    <body background="{{url_for('static', filename='images/11.jpg')}}" >
+      <br />
+  <div align="center">
+    <button class="button button2">
+    <div style = "font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', 
+    sans-serif;">
+          <h1>STUDENT PATH TRACKING</h1>
+        </div>
+    </button>
+        <br />
+        <br />
+        <br />
+<section id="contact" class="contact">
+
+    <div class="container" data-aos="fade-up">
+
+      <header class="section-header">
+        <div align="center"><h2>[CONTACT]</h2></div>
+       
+        
+      </header>
+      <br />
+      <br />
+	 
+      <div class="row gy-4">
+
+        <div class="col-lg-6">
+
+          <div class="row gy-4">
+            <div class="col-md-6">
+              <div class="info-box">
+                <i class="bi bi-geo-alt"></i>
+                <h3>Address</h3>
+                <p>BARUIPUR<br>KOL-144</p>
+                
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="info-box">
+                <i class="bi bi-telephone"></i>
+                <h3>Call Us</h3>
+                <p>8670673327</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="info-box">
+                <i class="bi bi-envelope"></i>
+                <h3>Email Us</h3>
+                <p>papaipratihar01@gmail.com</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="info-box">
+                <i class="bi bi-clock"></i>
+                <h3>Open Hours</h3>
+                <p>TUESDAY - SATURDAY<br>10:00AM - 05:00PM</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-lg-6">
+          <form action="/contact" method="post" class="php-email-form">
+            <div class="row gy-4">
+
+              <div class="col-md-4">
+                <input type="text" name="firstname" class="form-control" placeholder="Your firstName" required>
+				</div>
+				<div class="col-md-4">
+				<input type="text" name="middlename" class="form-control" placeholder="Your middleName" >
+				</div>
+				<div class="col-md-4">
+				<input type="text" name="lastname" class="form-control" placeholder="Your lastName" required>
+              </div>
+			  
+			  <div class="col-md-6 ">
+                <input type="numeric" class="form-control" name="mobno" placeholder="Your Mobile No" required>
+              </div>
+
+              <div class="col-md-6 ">
+                <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+              </div>
+
+              <div class="col-md-12">
+                <input type="text" class="form-control" name="subject" placeholder="Subject" required>
+              </div>
+
+              <div class="col-md-12">
+                <textarea class="form-control" name="message" rows="6" placeholder="FEEEDBACK" required></textarea>
+              </div>
+
+              <div class="col-md-12 text-center">
+                <div class="loading"></div>
+                <div class="error-message"></div>
+                <div class="sent-message"></div>
+                <br />
+				 <div align="center"font="red">
+	  <h3><p style=color:red>{{msg}}</p></h3>
+	  </div>
+                <button class="button button1" type="submit">Send feedback</button>
+                <br />
+                <br />
+                <br />
+                <br />
+                
+
+            </div>
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+</body>
+</html>

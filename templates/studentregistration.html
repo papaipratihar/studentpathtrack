@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bootstrap4/bootstrap.min.css">
+
+    <title>STUDENT REGISTRATION</title>
+    <div align="right">
+        <button><b>
+        <a href="/">HOME</a> &nbsp;| &nbsp;
+      <a href="/">ABOUT US</a> &nbsp;| &nbsp;
+      <a href="/">REGISTRATION</a> &nbsp;| &nbsp;
+      <a href="/">LOGIN</a> &nbsp;| &nbsp;
+      <a href="/">CONTACT US</a> &nbsp;| &nbsp;
+    </b></button>
+      </div>
+      <br />
+            <style>
+                .button1 {
+                  background-color: #183afc; 
+                  border: none;
+                  color: white;
+                  padding: 8px;
+                  text-align: center;
+                  text-decoration: none;
+                  display: inline-block;
+                  font-size: 16px;
+                  margin: 3px 1px;
+                  cursor: pointer;
+                  width: 40%
+                }
+                .button2 {
+                  background-color: transparent; 
+                  border: none;
+                  color: black;
+                  padding: 8px;
+                  text-align: center;
+                  text-decoration: none;
+                  display: inline-block;
+                  font-size: 16px;
+                  margin: 3px 1px;
+                  width: 60%
+                }
+                .button3 {
+          background-color: transparent; 
+          border:none;
+          color:rgb(5, 111, 153);
+          padding: 8px;
+          text-align: center;
+          text-decoration:underline;
+          display: inline-block;
+          font-size: 16px;
+          width: 50%
+        }
+        .button4 {
+          background-color: whitesmoke; 
+          border:none;
+          color:rgb(5, 111, 153);
+          padding: 8px;
+          text-align: left;
+          text-decoration:none;
+          display: inline-block;
+          font-size: 16px;
+          width: 20%;
+          height: 70%;
+        }  
+                .button1 {border-radius: 15px;}
+                .button2 {border-radius: 8px;}
+                .button3 {border-radius: 8px;}
+                .button4 {border-radius: 8px;}
+                </style>
+    <!--<script>
+        function checkname() {
+            nameexp = /^[a-zA-Z ]{3,30}$/;
+            custname = document.getElementById("fname").value;
+            // alert(custname);
+
+            if (nameexp.test(custname)) {
+                document.getElementById('nameerrormessage').style.visibility = 'hidden';
+            }
+            else {
+                document.getElementById('nameerrormessage').style.visibility = 'visible';
+                document.getElementById('nameerrormessage').innerText = "Enter Valid Name";
+            }
+        }
+        function checkrollno() {
+            rollnoexp = /^[0-9]\d{9}$/;
+
+            
+
+            custrollno = document.getElementById("rollno").value;
+            
+
+            if (rollnoexp.test(custrollno)) {
+                document.getElementById('rollnoerrormessage').style.visibility = 'hidden';
+            }
+            else {
+                document.getElementById('rollnoerrormessage').innerText = "Enter Valid roll No";
+            }
+        }
+
+        function checkdateofbirth() {
+            dateofbirthexp = /^dd-mm-yyyy$/;
+
+            
+
+            custdateofbirth = document.getElementById("dateofbirth").value;
+            
+
+            if (dateofbirthexp.test(custdateofbirth)) {
+                document.getElementById('dateofbirtherrormessage').style.visibility = 'hidden';
+            }
+            else {
+                document.getElementById('dateofbirtherrormessage').innerText = "Enter Valid date of birth";
+            }
+        }
+
+
+
+        function checkmobno() {
+            mobnoexp = /^[6789]\d{9}$/;
+
+            
+
+            custmobno = document.getElementById("mobno").value;
+            //alert(custmobno);
+
+            if (mobnoexp.test(custmobno)) {
+                document.getElementById('mobnoerrormessage').style.visibility = 'hidden';
+            }
+            else {
+                document.getElementById('mobnoerrormessage').innerText = "Enter Valid Mobile No";
+            }
+        }
+
+        function checkmobno() {
+            mobnoexp = /^[6789]\d{9}$/;
+
+            
+
+            custmobno = document.getElementById("mobno").value;
+            //alert(custmobno);
+
+            if (mobnoexp.test(custmobno)) {
+                document.getElementById('mobnoerrormessage').style.visibility = 'hidden';
+            }
+            else {
+                document.getElementById('mobnoerrormessage').innerText = "Enter Valid Mobile No";
+            }
+        }
+
+        function checkemail() {
+            
+            emailexp = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+
+            custemail = document.getElementById("email").value;
+            //alert(custemail);
+
+            if (emailexp.test(custemail)) {
+                document.getElementById('emailerrormessage').style.visibility = 'hidden';
+            }
+            else {
+                document.getElementById('emailerrormessage').style.visibility = 'visible';
+                document.getElementById('emailerrormessage').innerText = "Enter Valid Email ID";
+            }
+        }
+        function checkaddress() {
+            rollnoexp = /^vill,post, ps, dist$/;
+
+            
+
+            custrollno = document.getElementById("address").value;
+            
+
+            if (addressexp.test(custaddress)) {
+                document.getElementById('addresserrormessage').style.visibility = 'hidden';
+            }
+            else {
+                document.getElementById('addresserrormessage').innerText = "Enter Valid address";
+            }
+        }
+
+        function checkpassword() {
+            // at least one number, one lowercase and one uppercase letter
+            // at least six characters that are letters, numbers or the underscore
+            passwordexp = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])\w{4,8}$/;
+
+            custpassword = document.getElementById("password").value;
+            // alert(custpassword);
+
+            if (passwordexp.test(custpassword)) {
+                document.getElementById('passerrormessage').style.visibility = 'hidden';
+            }
+            else {
+                document.getElementById('passerrormessage').style.visibility = 'visible';
+                document.getElementById('passerrormessage').innerText = "Enter Valid Password";
+            }
+        }
+    </script>-->
+
+</head>
+
+<body background="{{url_for('static', filename='images/login.jpg')}}" >
+    <br />
+  <div align="center">
+    <button class="button button3">
+    <div style = "font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', 
+    sans-serif;">
+          <h1>STUDENT PATH TRACKING</h1>
+        </div>
+    </button>
+        <br />
+    
+        <div class="container">
+            <div class="form">
+            <div class="col-md-6 col-sm-8 mx-auto" style="background-color: rgba(3, 88, 116, 0.425); border-radius: 20px;">
+                
+                        <div class="mt-2 text-center">
+                            <button class="button button2"><h3>Create Your Account </br></br> Student Registration</h3></button>
+							<h3>{{msg}}</h3>
+                        </div>
+                        <div align="left">
+                        <div class="mt-4">
+                            <form action="/studentregistration" method="post" name='registration'>
+                                <div class="form-group">
+                                    <label for="name" class="text-uppercase font-weight-bold">Name:</label>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <input type="text" onblur="checkname()" class="form-control" id="fname"
+                                                name="firstname" placeholder="First Name" required="required">
+                                              </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                              <div class="form-group">
+                                                <input type="text" onblur="checkname()" class="form-control" id="fname"
+                                                name="middlename" placeholder="Middle Name">
+                                                <div class="text-danger font-weight-bold" id="nameerrormessage"></div>  
+                                              </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                  <input type="text" onblur="checkname()" class="form-control" id="fname"
+                                                  name="lastname" placeholder="Last Name" required="required"> 
+                                                  <div class="text-danger font-weight-bold" id="nameerrormessage"></div> 
+                                                </div>
+                                              </div>
+                                          </div>
+                                <div class="form-group">
+                                    <label for="rollno" class="text-uppercase font-weight-bold ">roll No:</label>
+                                    <input type="numeric" onblur="checkrollno()" class="form-control" id="rollno" name="rollno"
+                                        placeholder="Enter Your roll No" required="required">
+                                    <div class="text-danger font-weight-bold" id="rollnoerrormessage"></div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="rollno" class="text-uppercase font-weight-bold ">mobile No:</label>
+                                    <input type="numeric" onblur="checkrollno()" class="form-control" id="rollno" name="mobno"
+                                        placeholder="Enter Your roll No" required="required">
+                                    <div class="text-danger font-weight-bold" id="rollnoerrormessage"></div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="mobno" class="text-uppercase font-weight-bold"> Date Of Birth:</label>
+                                    <input type="date" onblur="checkdateofbirth()" class="form-control" id="dateofbirth" name="dateofbirth"
+                                        placeholder="Enter Your date of birth" required="required">
+                                    <div class="text-danger font-weight-bold" id="dateofbirtherrormessage"></div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label for="email"
+                                        class="text-uppercase font-weight-bold">mail id:</label>
+                                    <input type="email" onblur="checkemail()" class="form-control" id="email"
+                                        name="email" placeholder="Enter Your Email" required="required">
+                                    <div class="text-danger font-weight-bold" id="emailerrormessage"></div>
+                                </div>
+
+                                <label for="course" class="text-upercase font-weight-bold" >MENTOR NAME:</label>
+                                <select name="mentor" id="name"  style="width: 20%;" >
+                                  <option value="CE">NA</option>
+                                </select>
+                                <label for="course"  class="text-upercase font-weight-bold">MENTOR EMAIL:</label>
+                                <select name="mentoremail" id="email" style="width: 20%;" >
+                                  <option value="CE">NA</option>
+                                </select>
+								</br></br>
+								
+                                <label for="course" class="text-upercase font-weight-bold">COURSE NAME:</label>
+<select name="dept" id="dept" style="width: 20%;">
+  <option value="CE">CIVIL ENGINEERING</option>
+  <option value="CSE">COMPUTER SCIENCE AND ENGINEERING</option>
+  <option value="ECE">ELECTRONIX AND COMMUNICATION ENGINEERING</option>
+  <option value="EE">ELECTRICAL ENGINEERING</option>
+  <option value="ME">MECHANICAL ENGINEERING</option>
+</select>
+<label for="LANGUAGE" class="text-upercase font-weight-bold">LANGUAGE KNOWN:</label>
+
+<select name="lang" id="lang" style="width: 15%;">
+  <option value="bengali">BENGALI</option>
+  <option value="english">ENGLISH</option>
+  <option value="hindi">HINDI</option>
+  <option value="extra">EXTRA</option>
+</select>
+</div>
+
+                                <div>
+                                    <label for="gender" class="text-uppercase font-weight-bold">gender:</label>
+									<select id="gen" name="gen">
+                                    <option name="g1"> Male</option>
+                                    &nbsp;&nbsp;&nbsp;
+                                    <option name="g2"> Female</option>
+                                    &nbsp;&nbsp;&nbsp;
+                                    <option name="g3">Other</option>
+									</select>
+								</div>
+								</div>
+
+<br />
+<div class="form-group">
+<label for="password" class="text-uppercase font-weight-bold">Password:</label>
+<input type="password" onblur="checkpassword()" class="form-control" id="password" name="pass"
+placeholder="Enter password" required="required"  autocomplete="current-password" required="" 
+id="id_password" >
+                                     
+                                    <!--<div>note
+                                        <br />1 Digit
+                                        <br />1 LowerCase
+                                        <br />1 UpperCase
+                                        <br /> Min 4 - Max 8</div>
+                                    <div class="text-danger font-weight-bold" id="passerrormessage"></div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password" class="text-uppercase font-weight-bold">confirm Password:</label>
+                                    <input type="password" onblur="checkpassword()" class="form-control" id="password" name="password"
+                                        placeholder="Enter password" required="required">
+                                        <div class="text-danger font-weight-bold" id="passerrormessage"></div>
+                                </div>-->
+                                
+<br />
+<div align="center"font="red">
+<h3><p style=color:red>{{msg}}</p></h3>
+<div align="center">
+<button class="button button1" type="submit" class="btn btn-primary btn-block">Create Account</button>
+</div>
+<br />
+</form>
+<br />
+                            <br />
+                        </div>
+                    </div> <!-- Form tag div -->
+                    </div> <!-- Card Body End -->
+                </div> <!-- Card End -->
+            </div> <!-- Col alignment end -->
+        </div><!-- Row End -->
+    </div> <!-- Container End -->
+</body>
+
+</html>

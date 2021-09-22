@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bootstrap4/bootstrap.min.css">
+
+  <title>Admin</title>
+</head>
+
+<body style="background-color:#C0FDE6">
+  <!-- main app container -->
+  <div class="container" style="text-align: center;">
+    <br />
+    <br />
+    <nav>
+      <b>
+        <a href="/viewall"><button type="button" class="btn btn-primary">VIEW ALL</button></a>
+		<a href="/search"><button type="button" class="btn btn-primary">SEARCH</button></a>
+		<a href="/delete"><button type="button" class="btn btn-primary">DELETE</button></a>
+		<a href="/mentorasign"><button type="button" class="btn btn-primary">ASIGN STUDENT MENTOR</button></a>
+		<a href="/admincontact"><button type="button" class="btn btn-primary">CONTACT DETAILS</button></a>
+		<a href="/login"><button type="button" class="btn btn-primary">LOGOUT</button></a>
+      </b>
+    </nav>
+    <br />
+    <br />
+
+
+    <div class="row">
+      <div class="col-md-6 col-sm-8 mx-auto">
+        <div class="card">
+          <div class="card-body" style="background-color: #eeefff">
+            <div class="mt-2 text-center">
+              <h3 style="color: brown;">DELETE USER</h3>
+            </div>
+            <div align = "center">
+			   <h5 style="color:red">
+			      <b> {{ msg }} </b>
+			   </h5>
+			</div>
+
+            <form action="/delete" method="post">
+
+              <div class="form-group">
+                <label for="email" class="fw-bold text-uppercase text-primary">Email Id *</label>
+                <input type="email" name="email" class="form-control" placeholder="Enter Email Id">
+              </div>
+
+              <br />
+             
+              <input type="submit" class="btn btn-success btn-block" value="DELETE">
+            </form>
+
+          </div> <!-- Card Body End -->
+        </div> <!-- Card End -->
+      </div> <!-- Col alignment end -->
+    </div> <!-- Row End -->
+	
+	<br/>
+	<br/>
+
+  </div> <!-- Container End -->
+
+</body>
+
+</html>

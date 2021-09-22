@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	   integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CONTACT</title>
+</head>
+
+
+<body style="background-color: #B8C98C">
+
+        
+	<br />
+	<br />
+	<div align="center">
+       <h3 style="color: brown;">ALL CONTACT DETAILS</h3>
+    </div>
+	<div align = "center">
+	  <table class="table table-hover table-bordered">
+	   <tr>
+	      <th> First Name </th>
+		  <th> Middle Name </th>
+		  <th> Last Name </th>
+		  <th> Email </th>
+		  <th> Mobile </th>
+		  <th> Feedback </th>
+	   </tr>
+           {% for uobj in userdata %}
+		<tr>
+		 <td> {{ uobj['username1'] }} </td>
+		 <td> {{ uobj['username2'] }} </td>
+		 <td> {{ uobj['username3'] }} </td>
+		 <td> {{ uobj['useremail'] }} </td>
+		 <td> {{ uobj['usermobile'] }} </td>
+		 <td> {{ uobj['feedback'] }} </td>
+	   </tr>
+           {% endfor %}
+        <table>
+    </div> <!-- Container End -->
+ </body>
+
+</html>

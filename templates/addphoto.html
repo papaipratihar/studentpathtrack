@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	   integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+         .button {
+          background-color: whitesmoke; 
+          border:none;
+          color:rgb(5, 111, 153);
+          padding: 8px;
+          text-align: left;
+          text-decoration:none;
+          display: inline-block;
+          font-size: 16px;
+          width: 20%;
+          height: 85%;
+        }  
+                .button {border-radius: 8px;}
+                
+    </style>
+</head>
+<body style="background-color:#1c87c9;">
+
+	<div class="body" align="center">
+		<div align="center">
+            <button class="button button">
+        <div class="content">
+            <div class="regform">
+                <h3 align='center' style="color: blueviolet;">UPLOAD RESULT</h3>
+            </div>
+            <div class="main" align="left">
+                <form action="/addphoto" method="POST" enctype="multipart/form-data">
+                    
+                    
+                    
+					<label class="firstlabel">Enter Your Description</label>
+                    <input class="company" type="text" name="des" style="width: 97%;"><br><br>
+                    
+					<label class="firstlabel">Student Name</label>
+					<input class="company" type="text" name="name"style="width: 97%;"><br><br>
+
+                    <h4 class="name">Upload Picture</h4>
+
+                    <div class="container">
+                        <div class="row">
+                        
+                            <p>
+                                {% with messages = get_flashed_messages() %}
+                                {% if messages %}
+                                    <ul>
+                                    {% for message in messages %}
+                                    <li>{{ message }}</li>
+                                    {% endfor %}
+                                    </ul>
+                                {% endif %}
+                                {% endwith %}
+                            </p>
+                            {% if filename %}
+                                <div>
+                                    <img src="{{ url_for('display_image', filename=filename) }}">
+                                </div>
+                            {% endif %} 
+                            <dl>
+                                <p>
+                                    <input type="file" name="file" class="form-control" autocomplete="off" required>
+                                </p>
+                            </dl>
+                        </div>
+                    </div>
+                
+                </button>
+            <div>
+                    <button type="submit"><h3>Submit</h3></button>
+                </div>
+            
+                </form>
+            </div>
+        
+        </div>
+    
+</body>
+</html>

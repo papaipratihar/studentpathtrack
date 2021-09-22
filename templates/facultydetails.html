@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	   integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin Search</title>
+</head>
+
+<body style="background-color:#3394FF">
+  <!-- main app container -->
+  <div class="container" style="text-align: center;">
+    <br />
+    <br />
+    <nav>
+      <b>
+        
+      </b>
+    </nav>
+    <br />
+    <br />
+    <div class="mt-2 text-center">
+       <h3 style="color: brown;">TEACHER DETAILS</h3>
+    </div>
+	<div align = "center">
+	  <table class="table table-hover table-bordered">
+	   <tr>
+	      <th> First Name </th>
+		  <th> Middle Name </th>
+		  <th> last Name </th>
+		  <th> Id No</th>
+		  <th> Email </th>
+		  <th> Mobile </th>
+		  <th> Gender </th>
+		  <th> DOB </th>
+	   </tr>
+           {% for uobj in userdata %}
+		<tr>
+		 <td> {{ uobj['username1'] }} </td>
+		 <td> {{ uobj['username2'] }} </td>
+		 <td> {{ uobj['username3'] }} </td>
+		 <td> {{uobj['userid'] }} </td>
+		 <td> {{ uobj['useremail'] }} </td>
+		 <td> {{ uobj['usermobile'] }} </td>
+		 <td>{{uobj['usergender']}}</td>
+		 <td> {{ uobj['userdateofbirth'] }} </td>
+	   </tr>
+           {% endfor %}
+        <table>
+    </div> <!-- Container End -->
+ </body>
+
+</html>
